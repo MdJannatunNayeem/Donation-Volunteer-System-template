@@ -1,0 +1,133 @@
+{% extends 'base-db-donor.html' %}
+{% load static %}
+        <!-- Home Dashboard -->
+        {% block main %}
+        <div class="container mt-5">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header bg-primary text-white">
+                            <div>
+                                <h3>My Total Donations</h3>
+                                <hr>
+                            </div>
+                            <div class="row align-items-center pt-2">
+                                <div class="col">
+                                    <i class="fa fa-list fa-3x"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="display-6">{{donationcount}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="{% url 'donation_history' %}" class="text-primary">View Details</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-2">
+                    <div class="card text-center ">
+                        <div class="card-header bg-success text-white " >
+                            <div>
+                                <h3>My Accepted Donations</h3>
+                                <hr>
+                            </div>
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <i class="fa fa-snowflake fa-3x"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="display-6">{{acceptedcount}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="{% url 'donation_history' %}" class="text-primary">View Details</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-2">
+                    <div class="card text-center ">
+                        <div class="card-header bg-danger text-white ">
+                            <div>
+                                <h3>My Rejected Donations</h3>
+                                <hr>
+                            </div>
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <i class="fa fa-arrows fa-3x"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="display-6">{{rejectedcount}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="{% url 'donation_history' %}" class="text-primary">View Details</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">    
+            <div class="row mt-5">
+                <div class="col-lg-6 col-md-6 mt-2">
+                    <div class="card text-center ">
+                        <div class="card-header bg-warning text-white ">
+                            <div>
+                                <h3>My Pending Donations</h3>
+                                <hr>
+                            </div>
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <i class="fa fa-exchange fa-3x"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="display-6">{{pendingcount}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="{% url 'donation_history' %}" class="text-primary">View Details</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header  bg-secondary text-white">
+                            <div>
+                                <h3>My Successfully Delivered Donations</h3>
+                                <hr>
+                            </div>
+                            <div class="row align-items-center pt-3">
+                                <div class="col">
+                                    <i class="fa-solid fa-bahai fa-3x"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="display-6">{{deliveredcount}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h4>
+                                <a href="{% url 'donation_history' %}" class="text-primary">View Details</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock main %}
+
+           
+         
+
