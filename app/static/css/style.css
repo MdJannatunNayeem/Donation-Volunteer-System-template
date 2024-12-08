@@ -1,5 +1,7 @@
-body {
-    padding-top: 70px;
+html,body {
+   margin: 0;
+    padding:0x;
+    height: 100vh;
   }
   .page-section h2.section-heading{
     font-size: 2.5rem;
@@ -37,7 +39,7 @@ body {
     cursor:pointer;
   }
   .card-title{  
-    font-size:25px;
+    font-size:18px;
     transition:1s;
     cursor:pointer;
     text-align: center;
