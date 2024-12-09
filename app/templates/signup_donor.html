@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+        <div class="card-body p-5 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        
+        <h2 class="fw-bold mb-2 text-uppercase text-center">Donor Sign Up</h2>
+        <p class="text-white-50 mb-2 text-center">Please enter following details</p>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="firstname" placeholder="Enter First Name"  class="form-control"  pattern="[A-Za-z]+">
+            </div>
+        </div>
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="lastname" placeholder="Enter Last Name"  class="form-control" pattern="[A-Za-z]+">
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 p-2">
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" name="email" placeholder="Email Address" required class="form-control">
+            </div>
+        </div>
+
+        <div class="col-sm-6 p-2">
+            <div class="form-group">
+                <label>Contact</label>
+                <input type="text" name="contact" placeholder="Contact Number" required class="form-control">
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 p-2">
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="pwd" placeholder="Enter Password"  class="form-control">
+            </div>
+        </div>
+
+        <div class="col-sm-6 p-2">
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="cpwd" placeholder="Enter Password Again"  class="form-control">
+            </div>
+        </div>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Upload PIC</label>
+                <input type="file" name="userpic" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" class="form-control" placeholder="Full Address"></textarea>
+            </div>
+        </div>
+    
+  
+    <input type="submit" value="Submit" class="mt-4 px-3 btn btn-primary">
+    <div class="mt-4 px-3 text-center">
+      <p class="mb-0">Already have an account? <a href="{% url 'login_donor' %}" class="text-white-50 fw-bold">Login</a></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</section>
+{% endblock main %}
