@@ -1,4 +1,4 @@
-##KindVest
+## KindVest
 
 Welcome to KindVest. It is a Donation & Volunteer System! This platform is designed to streamline 
 the process of donating to charitable causes and finding volunteering opportunities. 
