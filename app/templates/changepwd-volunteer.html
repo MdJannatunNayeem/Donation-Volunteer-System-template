@@ -1,0 +1,36 @@
+{% extends 'base-db-volunteer.html' %}
+{% load static %}
+{% block main %}
+<div class="container mt-5 vh-100 table-responsive">
+    <h3>Change Password</h3>
+    <hr>
+    <div class="row">
+
+      <div class="col-lg-12 p-2">
+          <div class="form-group">
+              <label>Current Password</label>
+              <input type="password" name="currentpassword" id = "currentpassword" placeholder="Enter Current Password"  class="form-control" required>
+          </div>
+      </div>
+ 
+
+  
+      <div class="col-lg-12 p-2">
+          <div class="form-group">
+              <label>New Password</label>
+              <input type="password" name="newpassword" placeholder="Enter New Password"  class="form-control" required>
+          </div>
+      </div>
+  
+      <div class="col-lg-12 p-2">
+          <div class="form-group">
+              <label>Confirm New Password</label>
+              <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter New Password Again"  class="form-control" required>
+          </div>
+      </div>
+
+  
+  <input type="submit" value="Submit" class="m-2 px-3 btn btn-primary">
+</div>
+  </div>
+{% endblock main %}
