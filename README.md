@@ -43,14 +43,20 @@ the process of donating to charitable causes and finding volunteering opportunit
    - Create a `.env` file in the root directory.
    - Add the following variables:
      ```env
-     DATABASE_URL=<your_database_url>
-     SECRET_KEY=<your_secret_key>
+    DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
      ```
 7. Run the application:
    Python-based systems:
    ```bash
    python app.py
-   ```
+   ```python mannage.runserver
+
 
 ---
 
