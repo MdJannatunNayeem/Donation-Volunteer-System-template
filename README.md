@@ -13,6 +13,8 @@ the process of donating to charitable causes and finding volunteering opportunit
 4. Mohona Mohsin (21225103404)
 5. Saad Abdullah (21224103044)
 
+---
+
 ## Features
 
 - **User Registration or Login**: Secure authentication for donors, volunteers, and administrators.
