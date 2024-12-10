@@ -17,6 +17,19 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 
     <link rel="stylesheet" href="{% static 'css/style-admin.css' %}">
+
+    <style>
+        .sidebar{
+            margin:0;
+            padding-bottom:0;
+            height: 100vh; 
+            position: fixed; 
+            overflow-y: scroll; 
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }        
+        
+    </style>
 </head>
 
 <body class="bg-light bg-gradient">
@@ -33,8 +46,8 @@
                 <div class="profile_details">
                     <img src="{% static 'images/donation.jpg' %}"  alt="" >
                     <div class="name_job">
-                        <div class="name">Nilesh Borate</div>
-                        <div class="email">nilesh@gmail.com</div>
+                        <div class="name">{{request.user.first_name}} {{request.user.last_name}}</div>
+                        <div class="email">{{request.user.email}}</div>
                     </div>
                 </div>
             </div>

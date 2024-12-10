@@ -20,6 +20,9 @@
     <style>
         .sidebar{
             background: #0C3373;
+            overflow-y: scroll; 
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
         }        
         body{
             background-image: linear-gradient(45deg, #CEDCF3, #738EBB, #CEDCF3);
@@ -39,10 +42,10 @@
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
-                    <img src="{% static 'images/donation.jpg' %}"  alt="" >
+                    <img src="{{request.user.volunteer_set.all.0.userpic.url}}"  alt="" >
                     <div class="name_job">
-                        <div class="name">Nilesh Borate</div>
-                        <div class="email">nilesh@gmail.com</div>
+                        <div class="name">{{request.user.first_name}} {{request.user.last_name}}</div>
+                        <div class="email">{{request.user.email}}</div>
                     </div>
                 </div>
             </div>
