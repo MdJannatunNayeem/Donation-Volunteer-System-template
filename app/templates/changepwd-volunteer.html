@@ -5,32 +5,28 @@
     <h3>Change Password</h3>
     <hr>
     <div class="row">
-
-      <div class="col-lg-12 p-2">
-          <div class="form-group">
-              <label>Current Password</label>
-              <input type="password" name="currentpassword" id = "currentpassword" placeholder="Enter Current Password"  class="form-control" required>
-          </div>
-      </div>
- 
-
-  
-      <div class="col-lg-12 p-2">
-          <div class="form-group">
-              <label>New Password</label>
-              <input type="password" name="newpassword" placeholder="Enter New Password"  class="form-control" required>
-          </div>
-      </div>
-  
-      <div class="col-lg-12 p-2">
-          <div class="form-group">
-              <label>Confirm New Password</label>
-              <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Enter New Password Again"  class="form-control" required>
-          </div>
-      </div>
-
-  
-  <input type="submit" value="Submit" class="m-2 px-3 btn btn-primary">
+        <form action="" method="post" novalidate> {% csrf_token %}
+            {% for fm in form %}
+            <div class="form-group col-sm-12 p-3">
+            {{fm}} <small class="text-danger">{{fm.errors | striptags}}</small>
+            </div>
+            {% endfor %}
+            <div class="d-grid gap-2">
+            <input type="submit" value="Submit" class="mt-4 px-3 btn btn-primary">
+            </div>
+        </form>
+    
 </div>
-  </div>
+{% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        <p class="alert alert-danger my-3">{{error}}</p>
+    {% endfor %}
+{% endif %}
+
+{% if messages %}
+    {% for message in messages %}
+        <h3 {% if message.tags %} class="text-center alert alert-{{message.tags}} my-5" {% endif %}>{{message}}</h3> 
+    {% endfor %}
+{% endif %}
+</div>
 {% endblock main %}

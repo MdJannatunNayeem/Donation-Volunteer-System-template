@@ -14,12 +14,15 @@
               </tr>
         </thead>
         <tbody>
+
+          {% for i in donation %}
             <tr class="text-center">
-                <th>1</th>
-                <td>Nilesh</td>
-                <td> 02/02/2022</td>
-                <td><a href="{% url 'donationcollection_detail' 2 %}">View Details</a></td>
-              </tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.donationname}}</td>
+            <td>{{i.donationdate}}</td>
+            <td><a href="{% url 'donationcollection_detail' i.id %}" class="text-primary">View Details</a></td>
+            </tr>
+          {% endfor %}
         </tbody>
     </table>
   </div>
